@@ -1,10 +1,10 @@
 {
 	"manifest_version": 1,
-	"id": "com.ambrth.GoToItemViaText",
-	"app_min_version": "1.4",
+	"id": "goToItemViaTextPlugin",
+	"app_min_version": "1.4.19",
 	"version": "1.0.0",
-	"name": "Go To Item Via Text",
-	"description": "Goes to item (#tag, @notebook, noteId)  highlighted in text editor and goes to it.",
+	"name": "Go to via text",
+	"description": "Goes to tag, notebook or note via highlighted text",
 	"author": "a",
-	"homepage_url": ""
+	"homepage_url": "a"
 }
