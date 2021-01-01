@@ -4,10 +4,10 @@
   "description": "",
   "scripts": {
     "dist": "webpack",
-    "postinstall": "npm run dist", 
-    "rerun":"npm run dist && APPIMAGELAUNCHER_DISABLE=y ~/Downloads/Joplin-1.5.14.AppImage --env dev"
+    "postinstall": "npm run dist",
+    "rerun": "npm run dist && APPIMAGELAUNCHER_DISABLE=y ~/Downloads/Joplin-1.5.14.AppImage --env dev"
   },
-  "keywords": [],
+  "keywords": {},
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.0.14",

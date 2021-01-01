@@ -1,7 +1,7 @@
 {
 	"manifest_version": 1,
 	"id": "goToItemViaTextPlugin",
-	"app_min_version": "1.4.19",
+	"app_min_version": "1.5.14",
 	"version": "1.2.0",
 	"name": "Go to via text",
 	"description": "Goes to tag, notebook or note via highlighted text",
