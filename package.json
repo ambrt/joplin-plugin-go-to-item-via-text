@@ -1,5 +1,5 @@
 {
-  "name": "joplin-plugin-go-to-tag-or-notebook",
+  "name": "joplin-plugin-tag-and-notebook-links",
   "version": "1.3.0",
   "scripts": {
     "dist": "webpack",

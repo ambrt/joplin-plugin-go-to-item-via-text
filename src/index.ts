@@ -68,7 +68,7 @@ joplin.plugins.register({
 			iconName: 'fas fa-anchor',
 			execute: async () => {
 				//Get selected text
-				const selectedText = await joplin.commands.execute('selectedText');
+				const selectedText = (await joplin.commands.execute('selectedText') as string);
 
 				try {
 					let first = selectedText.substr(0, 1);
@@ -110,11 +110,9 @@ joplin.plugins.register({
 			iconName: 'fas fa-anchor',
 			execute: async () => {
 				//Get selected text
-			//await joplin.commands.execute('editor.replaceSelection', `[asdf](asdf)`);
-				const selectedText = await joplin.commands.execute('selectedText');
-				//const selectedText = "#asdf"
-				//let copy = await joplin.commands.execute('textCopy');
-				//alert("copy	")
+				
+				const selectedText = (await joplin.commands.execute('selectedText') as string);
+				
 				
 
 				try {
