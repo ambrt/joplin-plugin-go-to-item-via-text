@@ -64,7 +64,7 @@ joplin.plugins.register({
 		}
 		await joplin.commands.register({
 			name: 'goToItemViaText',
-			label: 'Go to note via highlighted text',
+			label: 'Go to item via highlighted text ',
 			iconName: 'fas fa-anchor',
 			execute: async () => {
 				//Get selected text
