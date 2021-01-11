@@ -1,0 +1,10 @@
+{
+	"manifest_version": 1,
+	"id": "ambrt.gotoTagOrNotebook",
+	"app_min_version": "1.6",
+	"version": "1.3.0",
+	"name": "Create #tag and @notebook links",
+	"description": "Go to tag,notebook or note via links or via text",
+	"author": "a",
+	"homepage_url": "a"
+}
