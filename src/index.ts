@@ -106,7 +106,7 @@ joplin.plugins.register({
 
 		await joplin.commands.register({
 			name: 'convertTextToItem',
-			label: 'Converts text to tag or notebook',
+			label: 'Convert text to tag or notebook',
 			iconName: 'fas fa-anchor',
 			execute: async () => {
 				//Get selected text
