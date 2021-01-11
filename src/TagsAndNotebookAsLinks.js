@@ -1,5 +1,6 @@
-function plugin(markdownIt, _options) {``
+function plugin(markdownIt, _options) {
     var defaultRender = markdownIt.renderer.rules.link_open;
+    
     markdownIt.renderer.rules.link_open = function (tokens, idx, options, env, self) {
         var token = tokens[idx];
         console.log(token)
