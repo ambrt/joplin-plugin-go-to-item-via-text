@@ -58,8 +58,8 @@ module.exports = {
 							
 
 							CodeMirror.showHint(cm1, function (editor) {
-								//search here
-								//var list = await context.postMessage('messageFromCodeMirrorContentScript');
+								
+								
 								var list = [{ text: '[#asdf](:/#asdf)', displayText: 'asdf' },{ text: '[#asdf22](:/#asdf222)', displayText: 'asdf22222222' }]
 			
 			
@@ -76,8 +76,10 @@ module.exports = {
 								console.log(linkType)
 								console.log("word")
 								console.log(curWord)
-								/*var result = {
-									list: await context.postMessage({type:linkType,curWord:curWord}),
+								/*
+								const contentScriptId = context.contentScriptId
+								var result = {
+									list: await context.postMessage(contentScriptId,{type:linkType,curWord:curWord}),
 									from: CodeMirror.Pos(cursor.line, start-1),
 									to: CodeMirror.Pos(cursor.line, end)
 								};
