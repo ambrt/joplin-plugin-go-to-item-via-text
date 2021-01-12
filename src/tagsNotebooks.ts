@@ -6,7 +6,7 @@ function plugin(markdownIt, _options) {
         var token = tokens[idx];
         console.log(token)
         console.info(token)
-        aIndex = token.attrIndex('href');
+        let aIndex = token.attrIndex('href');
         console.log(aIndex)
         if(token.attrs[aIndex][1].substr(0,3)==":/#"){
             
