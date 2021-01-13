@@ -1,4 +1,4 @@
-# Joplin Plugin 1.6.8
+# Joplin Plugin
 
 This is a template to create a new Joplin plugin.
 
