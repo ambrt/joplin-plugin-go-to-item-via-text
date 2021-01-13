@@ -1,7 +1,7 @@
 # Joplin Plugin Tags and Notebooks as links
 
 For more and description go to:
-https://discourse.joplinapp.org/t/go-to-note-tag-or-notebook-via-highlighting-text-in-editor/12731
+https://discourse.joplinapp.org/t/go-to-tag-notebook-or-notes-via-links-and-by-highlighting-text-in-editor/12731
 
 The main two files you will want to look at are:
 
