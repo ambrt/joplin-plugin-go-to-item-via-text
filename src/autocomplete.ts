@@ -57,10 +57,10 @@ module.exports = {
 								let linkType = change.text[0];
 							
 
-							CodeMirror.showHint(cm1, function (editor) {
+							CodeMirror.showHint(cm1, async function (editor) {
 								
 								
-								var list = [{ text: '[#asdf](:/#asdf)', displayText: 'asdf' },{ text: '[#asdf22](:/#asdf222)', displayText: 'asdf22222222' }]
+								//var list = [{ text: '[#asdf](:/#asdf)', displayText: 'asdf' },{ text: '[#asdf22](:/#asdf222)', displayText: 'asdf22222222' }]
 			
 			
 								var cursor = editor.getCursor();
@@ -76,15 +76,15 @@ module.exports = {
 								console.log(linkType)
 								console.log("word")
 								console.log(curWord)
-								/*
+								
 								const contentScriptId = context.contentScriptId
 								var result = {
 									list: await context.postMessage(contentScriptId,{type:linkType,curWord:curWord}),
 									from: CodeMirror.Pos(cursor.line, start-1),
 									to: CodeMirror.Pos(cursor.line, end)
 								};
-								*/
-						
+								
+						/*
 								var result = {
 									list: (!curWord ? list : list.filter(function (item) {
 										return item.displayText.match(regex);
@@ -92,7 +92,7 @@ module.exports = {
 									from: CodeMirror.Pos(cursor.line, start-1),
 									to: CodeMirror.Pos(cursor.line, end)
 								};
-						
+						*/
 								return result;
 							});
 						

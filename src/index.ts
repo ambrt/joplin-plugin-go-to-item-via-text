@@ -230,7 +230,7 @@ joplin.plugins.register({
 				await joplin.commands.execute('openFolder', args[0]);
 			},
 		});
-		/*
+		
 		async function setContentScriptCodeMirror() {
 			const contentScriptId = 'contentScriptCodeMirrorTagsNotebooks';
 		
@@ -271,9 +271,9 @@ joplin.plugins.register({
 
 
 
-		//await setContentScriptCodeMirror()
-		*/
-		/*
+		await setContentScriptCodeMirror()
+		
+		
 		async function setupContentScriptMarkdownIt() {
 			const contentScriptId = 'contentScriptMarkdownItBacklinks';
 		
@@ -302,10 +302,10 @@ joplin.plugins.register({
 			});
 		}
 		await setupContentScriptMarkdownIt()
-		*/
 		
 		
-
+		
+		/*
 		await joplin.plugins.registerContentScript(
 			ContentScriptType.MarkdownItPlugin,
 			'tagsandnotebookaslinks',
@@ -320,7 +320,7 @@ joplin.plugins.register({
 			'tagsandnotebookaslinkssuggest',
 			'./autocomplete.js'
 		);
-		
+		*/
 
 
 	}
