@@ -17,7 +17,7 @@ function plugin(markdownIt, _options) {
             let mime = '';
             let resourceId = '';
             let resource = null;
-            let js = `onclick="webviewApi.executeCommand('goToTag', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
+            let js = `onclick="webviewApi.executeCommand('mygoToTag', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
             //let js = `webviewApi.postMessage('${contentScriptId}', {type:'tag', tagId:'${token.attrs[aIndex][1].substr(3)}'})`
             const attrHtml = [];
             attrHtml.push(`href='${hrefAttr}'`);

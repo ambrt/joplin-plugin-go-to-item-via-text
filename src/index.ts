@@ -216,10 +216,11 @@ joplin.plugins.register({
 		await joplin.views.toolbarButtons.create('Go to item via text', 'goToItemViaText', ToolbarButtonLocation.EditorToolbar);
 
 		await joplin.commands.register({
-			name: 'goToTag',
+			name: 'mygoToTag',
 			label: 'Go to tag from render view',
 			execute: async (...args) => {
 				//alert('Going to tag' + JSON.stringify(args));
+				
 				await joplin.commands.execute('openTag', args[0]);
 			},
 		});
@@ -230,7 +231,7 @@ joplin.plugins.register({
 				await joplin.commands.execute('openFolder', args[0]);
 			},
 		});
-		
+		/*
 		async function setContentScriptCodeMirror() {
 			const contentScriptId = 'contentScriptCodeMirrorTagsNotebooks';
 		
@@ -271,9 +272,9 @@ joplin.plugins.register({
 
 
 
-		await setContentScriptCodeMirror()
-		
-		
+		//await setContentScriptCodeMirror()
+		*/
+		/*
 		async function setupContentScriptMarkdownIt() {
 			const contentScriptId = 'contentScriptMarkdownItBacklinks';
 		
@@ -302,10 +303,10 @@ joplin.plugins.register({
 			});
 		}
 		await setupContentScriptMarkdownIt()
+		*/
 		
 		
-		
-		/*
+
 		await joplin.plugins.registerContentScript(
 			ContentScriptType.MarkdownItPlugin,
 			'tagsandnotebookaslinks',
@@ -314,7 +315,7 @@ joplin.plugins.register({
 			
 
 		
-			
+		/*	
 		await joplin.plugins.registerContentScript(
 			ContentScriptType.CodeMirrorPlugin,
 			'tagsandnotebookaslinkssuggest',
