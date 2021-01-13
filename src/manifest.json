@@ -1,10 +1,10 @@
 {
 	"manifest_version": 1,
-	"id": "goToItemViaTextPlugin",
-	"app_min_version": "1.5.14",
-	"version": "1.2.0",
-	"name": "Go to via text",
-	"description": "Goes to tag, notebook or note via highlighted text",
+	"id": "joplin.plugin.ambrt.goToItem",
+	"app_min_version": "1.6",
+	"version": "1.3.4",
+	"name": "Create and go to #tags and @notebooks",
+	"description": "Go to tag,notebook or note via links or via text",
 	"author": "a",
-	"homepage_url": "a"
+	"homepage_url": "https://discourse.joplinapp.org/t/go-to-note-tag-or-notebook-via-highlighting-text-in-editor/12731"
 }

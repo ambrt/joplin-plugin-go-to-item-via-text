@@ -1,0 +1,3 @@
+{
+	"extraScripts": ["TagsAndNotebookAsLinks.js", "autocomplete.ts", "tagsNotebooks.ts"]
+}

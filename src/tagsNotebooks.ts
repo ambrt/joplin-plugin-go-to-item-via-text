@@ -6,7 +6,7 @@ function plugin(markdownIt, _options) {
         var token = tokens[idx];
         console.log(token)
         console.info(token)
-        aIndex = token.attrIndex('href');
+        let aIndex = token.attrIndex('href');
         console.log(aIndex)
         if(token.attrs[aIndex][1].substr(0,3)==":/#"){
             
@@ -17,8 +17,8 @@ function plugin(markdownIt, _options) {
             let mime = '';
             let resourceId = '';
             let resource = null;
-            let js = `onclick="webviewApi.executeCommand('mygoToTag', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
-            //let js = `webviewApi.postMessage('${contentScriptId}', {type:'tag', tagId:'${token.attrs[aIndex][1].substr(3)}'})`
+            //let js = `onclick="webviewApi.executeCommand('goToTag', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
+            let js = `webviewApi.postMessage('${contentScriptId}', {type:'tag', tagId:'${token.attrs[aIndex][1].substr(3)}'})`
             const attrHtml = [];
             attrHtml.push(`href='${hrefAttr}'`);
             if (js) attrHtml.push(js);
@@ -45,8 +45,8 @@ function plugin(markdownIt, _options) {
             let mime = '';
             let resourceId = '';
             let resource = null;
-            let js = `onclick="webviewApi.executeCommand('goToNotebook', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
-            //let js = `webviewApi.postMessage('${contentScriptId}', {type:'folder', folderId:'${token.attrs[aIndex][1].substr(3)}'})`
+            //let js = `onclick="webviewApi.executeCommand('goToNotebook', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
+            let js = `webviewApi.postMessage('${contentScriptId}', {type:'folder', folderId:'${token.attrs[aIndex][1].substr(3)}'})`
             const attrHtml = [];
             attrHtml.push(`href='${hrefAttr}'`);
             if (js) attrHtml.push(js);
