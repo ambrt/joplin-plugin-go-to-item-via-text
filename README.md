@@ -1,6 +1,7 @@
-# Joplin Plugin
+# Joplin Plugin Tags and Notebooks as links
 
-This is a template to create a new Joplin plugin.
+For more and description go to:
+https://discourse.joplinapp.org/t/go-to-note-tag-or-notebook-via-highlighting-text-in-editor/12731
 
 The main two files you will want to look at are:
 
