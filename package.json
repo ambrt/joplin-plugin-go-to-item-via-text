@@ -1,12 +1,13 @@
 {
   "name": "joplin-plugin-tag-and-notebook-links",
-  "version": "1.3.4",
+  "version": "1.3.6",
   "homepage":"https://discourse.joplinapp.org/t/go-to-tag-notebook-or-notes-via-links-and-by-highlighting-text-in-editor/12731",
   "scripts": {
     "dist": "webpack --joplin-plugin-config buildMain && webpack --joplin-plugin-config buildExtraScripts && webpack --joplin-plugin-config createArchive",
     "prepare": "npm run dist",
     "update": "npm install -g generator-joplin && yo joplin --update",
-    "distrun": "npm run dist && ~/.joplin/Joplin.AppImage --env dev"
+    "distrun": "npm run dist && ~/.joplin/Joplin.AppImage --env dev",
+    "distrun2": "npm run dist && ~/Downloads/Joplin-1.6.8.AppImage --env dev"
   },
   "license": "MIT",
   "keywords": [

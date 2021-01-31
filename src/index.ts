@@ -8,6 +8,7 @@ function escapeTitleText(text: string) {
 
 joplin.plugins.register({
 	onStart: async function () {
+		let dialog = await joplin.views.dialogs.create('wrongText')
 		async function findTag(tagName) {
 			console.log(tagName)
 			let tagId = ''
@@ -156,8 +157,8 @@ joplin.plugins.register({
 				}
 				catch (err) {
 					console.log(err)
-					let dialog = await joplin.views.dialogs.create('wrongText')
-					await joplin.views.dialogs.setHtml(dialog, "Seems like text is not an exact id,tag or folder<br>Or other error occured");
+					//let dialog = await joplin.views.dialogs.create('wrongText')
+					await joplin.views.dialogs.setHtml(dialog, "Seems like text is not an exact note id, tag or folder<br>Include # or @ in front of tag or notebook<br>Or other error occured");
 					await joplin.views.dialogs.setButtons(dialog, [{ id: "ok" }]);
 					await joplin.views.dialogs.open(dialog);
 				}
@@ -201,8 +202,8 @@ joplin.plugins.register({
 				}
 				catch (err) {
 					console.log(err)
-					let dialog = await joplin.views.dialogs.create('wrongText')
-					await joplin.views.dialogs.setHtml(dialog, "Seems like text is not an exact id,tag or folder<br>Or other error occured");
+					
+					await joplin.views.dialogs.setHtml(dialog, "Seems like text is not an exact note id, tag or folder<br>Include # or @ in front of tag or notebook<br>Or other error occured");
 					await joplin.views.dialogs.setButtons(dialog, [{ id: "ok" }]);
 					await joplin.views.dialogs.open(dialog);
 				}
