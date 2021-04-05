@@ -275,9 +275,9 @@ joplin.plugins.register({
 
 		//await setContentScriptCodeMirror()
 		*/
-		/*
+		
 		async function setupContentScriptMarkdownIt() {
-			const contentScriptId = 'contentScriptMarkdownItBacklinks';
+			const contentScriptId = 'contentScriptMarkdownItGoTo';
 		
 			await joplin.contentScripts.register(
 				ContentScriptType.MarkdownItPlugin,
@@ -304,17 +304,17 @@ joplin.plugins.register({
 			});
 		}
 		await setupContentScriptMarkdownIt()
-		*/
 		
 		
-
+		
+/*
 		await joplin.plugins.registerContentScript(
 			ContentScriptType.MarkdownItPlugin,
 			'tagsandnotebookaslinks',
 			'./TagsAndNotebookAsLinks.js'
 		);
 			
-
+*/
 		
 		/*	
 		await joplin.plugins.registerContentScript(

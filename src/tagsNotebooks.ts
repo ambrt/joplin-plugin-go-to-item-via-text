@@ -1,7 +1,8 @@
 function plugin(markdownIt, _options) {
     var defaultRender = markdownIt.renderer.rules.link_open;
-    const contentScriptId = _options.contentScriptId;
-    //console.log(_options)
+    let contentScriptId = _options.contentScriptId;
+    if (!contentScriptId) contentScriptId = "contentScriptMarkdownItGoTo"
+    console.log(_options)
     markdownIt.renderer.rules.link_open = function (tokens, idx, options, env, self) {
         var token = tokens[idx];
         console.log(token)
@@ -18,7 +19,7 @@ function plugin(markdownIt, _options) {
             let resourceId = '';
             let resource = null;
             //let js = `onclick="webviewApi.executeCommand('goToTag', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
-            let js = `webviewApi.postMessage('${contentScriptId}', {type:'tag', tagId:'${token.attrs[aIndex][1].substr(3)}'})`
+            let js = `onclick="webviewApi.postMessage('${contentScriptId}', {type:'tag', tagId:'${token.attrs[aIndex][1].substr(3)}'});return false;"`
             const attrHtml = [];
             attrHtml.push(`href='${hrefAttr}'`);
             if (js) attrHtml.push(js);
@@ -46,7 +47,7 @@ function plugin(markdownIt, _options) {
             let resourceId = '';
             let resource = null;
             //let js = `onclick="webviewApi.executeCommand('goToNotebook', '${token.attrs[aIndex][1].substr(3)}'); return false;"`;
-            let js = `webviewApi.postMessage('${contentScriptId}', {type:'folder', folderId:'${token.attrs[aIndex][1].substr(3)}'})`
+            let js = `onclick="webviewApi.postMessage('${contentScriptId}', {type:'folder', folderId:'${token.attrs[aIndex][1].substr(3)}'}); return false;"`
             const attrHtml = [];
             attrHtml.push(`href='${hrefAttr}'`);
             if (js) attrHtml.push(js);
